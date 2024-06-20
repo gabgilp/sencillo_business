@@ -44,8 +44,11 @@ class _ProductosView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final idRubro = MainApp.jsonResponse['rubros']
-        .indexWhere((element) => element['nombre'] == nombre);
+    final rubro = MainApp.jsonResponse['rubros'].firstWhere(
+        (rubro) => rubro['nombre'] == nombre,
+        orElse: () => {'id': 0});
+
+    final idRubro = rubro['id'];
 
     final productos = MainApp.jsonResponse["productos"]
         .where((product) => product['idRubro'] == idRubro)
@@ -84,30 +87,30 @@ class _ProductosCelda extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        // context.push(
-        //   '/productos/$nombre',
-        // );
-      },
-      child: Container(
-        margin: const EdgeInsets.all(10),
-        padding: const EdgeInsets.all(10),
-        decoration: BoxDecoration(
-          color: Colors.red,
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Column(
-          children: [
-            Text(
-              nombre,
-              style: const TextStyle(color: Colors.white, fontSize: 20),
-            ),
-            Text(
-              '\$$precio',
-              style: const TextStyle(color: Colors.white, fontSize: 15),
-            )
-          ],
+    final width = MediaQuery.of(context).size.width;
+    return Padding(
+      padding: EdgeInsets.all(width * 0.045),
+      child: GestureDetector(
+        onTap: () {},
+        child: Container(
+          width: width * 0.41,
+          height: width * 0.41,
+          decoration: BoxDecoration(
+            color: Colors.red,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Column(
+            children: [
+              Text(
+                nombre,
+                style: const TextStyle(color: Colors.white, fontSize: 20),
+              ),
+              Text(
+                '\$$precio',
+                style: const TextStyle(color: Colors.white, fontSize: 15),
+              )
+            ],
+          ),
         ),
       ),
     );

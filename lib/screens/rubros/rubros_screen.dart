@@ -71,6 +71,7 @@ class _RubrosCelda extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.sizeOf(context).width;
     return GestureDetector(
       onTap: () {
         context.push(
@@ -78,10 +79,10 @@ class _RubrosCelda extends StatelessWidget {
         );
       },
       child: Padding(
-        padding: const EdgeInsets.all(18.0),
+        padding: EdgeInsets.all(width * 0.045),
         child: Container(
-            width: 179,
-            height: 179,
+            width: width * 0.41,
+            height: width * 0.41,
             decoration: BoxDecoration(
               color: Colors.red,
               borderRadius: BorderRadius.circular(30),

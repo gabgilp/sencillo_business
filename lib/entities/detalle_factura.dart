@@ -14,4 +14,8 @@ class DetalleFactura {
     required this.precioUnitario,
     required this.total,
   });
+
+  double calcularSubtotal() {
+    return total;
+  }
 }
