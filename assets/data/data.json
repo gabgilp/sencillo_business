@@ -1,0 +1,62 @@
+{
+    "empresa": {
+        "id": 1,
+        "nombre": "ACME",
+        "direccion": "Calle Principal",
+        "telefono": "04141148902",
+        "rif": "V000000009"},
+
+    "sucursal":{"id": 1,
+        "nombre": "Los Naranjos",
+        "direccion": "Calle 1",
+        "telefono": "123456",
+        "idEmpresa": 1},
+
+    "vendedor":{"id": 1,
+        "nombre": "Juan",
+        "telefono": "123456789",
+        "email": "prueba@gmail.com",
+        "idSucursal": 1,
+        "identificacion": "123456789"},
+
+    "cliente":{"id": 1,
+        "nombre": "John Doe",
+        "direccion": "Calle 123",
+        "telefono": "123456789",
+        "email": "prueba@gmail.com",
+        "identificacion": "123456789"},
+
+    "rubros":[
+        {"id":1, "nombre":"Refrescos", "idEmpresa":1},
+        {"id":2, "nombre":"Cervezas", "idEmpresa":1},
+        {"id":3, "nombre":"Licores", "idEmpresa":1},
+        {"id":4, "nombre":"Vinos", "idEmpresa":1},
+        {"id":5, "nombre":"Aguas", "idEmpresa":1},
+        {"id":6, "nombre":"Cigarros", "idEmpresa":1},
+        {"id":7, "nombre":"Snacks", "idEmpresa":1},
+        {"id":8, "nombre":"Cafes", "idEmpresa":1},
+        {"id":9, "nombre":"Te", "idEmpresa":1}
+    ],
+
+    "productos":[
+        {"id":1, "nombre":"Coca Cola", "precio": 1000, "idRubro":1},
+        {"id":2, "nombre":"Pepsi", "precio": 1000, "idRubro":1},
+        {"id":3, "nombre":"7up", "precio": 1000, "idRubro":1},
+        {"id":4, "nombre":"Corona", "precio": 1000, "idRubro":2},
+        {"id":5, "nombre":"Polar", "precio": 1000, "idRubro":2},
+        {"id":6, "nombre":"Solera", "precio": 1000, "idRubro":3},
+        {"id":7, "nombre":"Santa Teresa", "precio": 1000, "idRubro":3},
+        {"id":8, "nombre":"Don Simon", "precio": 1000, "idRubro":4},
+        {"id":9, "nombre":"Sangria", "precio": 1000, "idRubro":4},
+        {"id":10, "nombre":"Cristal", "precio": 1000, "idRubro":5},
+        {"id":11, "nombre":"Cielo", "precio": 1000, "idRubro":5},
+        {"id":12, "nombre":"Marlboro", "precio": 1000, "idRubro":6},
+        {"id":13, "nombre":"Camel", "precio": 1000, "idRubro":6},
+        {"id":14, "nombre":"Doritos", "precio": 1000, "idRubro":7},
+        {"id":15, "nombre":"Cheetos", "precio": 1000, "idRubro":7},
+        {"id":16, "nombre":"Nescafe", "precio": 1000, "idRubro":8},
+        {"id":17, "nombre":"Capuchino", "precio": 1000, "idRubro":8},
+        {"id":18, "nombre":"Lipton", "precio": 1000, "idRubro":9}
+    ]
+    
+}
